@@ -529,11 +529,13 @@ strong{color:var(--ink);}
 
         <div class="box tip">
           <span class="box-label">Ton profil</span>
-          <p style="margin-bottom:10px;">Choisis ta filière : seules les cibles qui te concernent s'afficheront dans le menu.</p>
+          <p style="margin-bottom:10px;">Choisis ton métier ou ta filière : seules les cibles qui te concernent s'afficheront dans le menu.</p>
           <div style="display:flex;gap:8px;flex-wrap:wrap;">
             <button class="role-btn" data-role="ASA" type="button">ASA</button>
             <button class="role-btn" data-role="ASSC" type="button">ASSC</button>
             <button class="role-btn" data-role="INF" type="button">Infirmier·ère</button>
+            <button class="role-btn" data-role="EDUC" type="button">Éducateur·trice</button>
+            <button class="role-btn" data-role="IPS" type="button">Intervenant·e psychosocial·e</button>
             <button class="role-btn" data-role="" type="button">Tout afficher</button>
           </div>
           <p id="roleConfirm" style="font-size:11px;color:var(--primary-dark);margin:8px 0 0 0;display:none;"></p>
@@ -551,7 +553,7 @@ strong{color:var(--ink);}
 
         <div class="box tip">
           <span class="box-label">Pour le suivi de ton parcours</span>
-          <p style="margin-bottom:8px;">Indique ton prénom et nom — ça permettra de générer un récapitulatif à la fin, à transmettre à ton référent de stage.</p>
+          <p style="margin-bottom:8px;">Indique ton prénom et nom — ça permettra de générer un récapitulatif à la fin, à transmettre à ton·ta référent·e de stage.</p>
           <input type="text" id="studentName" placeholder="Prénom Nom" autocomplete="off"
             style="width:100%;max-width:320px;font-family:'Tahoma','Segoe UI',Verdana,sans-serif;font-size:12.5px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);">
         </div>
@@ -643,7 +645,7 @@ strong{color:var(--ink);}
 
 <section class="panel" id="panel-2" data-title="Journal d'observations">
         <div class="eyebrow"><span class="dash"></span>Cible 2 · Transmission</div>
-        <h1>Noter une observation</h1>
+        <h1>Noter une observation et archiver</h1>
 
         <div class="path"><span class="path-label">Ouvrir la feuille d'observations</span><span class="path-step"><span class="path-num">1</span>Tableau de bord</span><span class="path-arrow">→</span><span class="path-step"><span class="path-num">2</span>Résident</span><span class="path-arrow">→</span><span class="path-step"><span class="path-num">3</span>Bouton « Observations »</span></div>
 
@@ -670,10 +672,10 @@ strong{color:var(--ink);}
         <p style="font-size:14px;color:var(--ink-soft);margin-bottom:4px;">Chez Altage, la couleur d'écriture dépend de la fonction de la personne qui rédige :</p>
         <div class="altage-legend">
           <span class="ac-item"><span class="ac-dot" style="background:#C0392B"></span>Rouge — nuit</span>
-          <span class="ac-item"><span class="ac-dot" style="background:#2E5FA3"></span>Bleu — infirmiers et ASSC</span>
+          <span class="ac-item"><span class="ac-dot" style="background:#2E5FA3"></span>Bleu — infirmier·ères et ASSC</span>
           <span class="ac-item"><span class="ac-dot" style="background:#1A1A1A"></span>Noir — aides</span>
-          <span class="ac-item"><span class="ac-dot" style="background:#2E7D46"></span>Vert — socio-éducatif, socio-culturel, secrétaires</span>
-          <span class="ac-item"><span class="ac-dot" style="background:#C67A1E"></span>Orange — intervenants externes</span>
+          <span class="ac-item"><span class="ac-dot" style="background:#2E7D46"></span>Vert — socio-éducatif (éducateur·trices, intervenant·es psychosociaux·ales), socio-culturel, secrétaires</span>
+          <span class="ac-item"><span class="ac-dot" style="background:#C67A1E"></span>Orange — intervenant·es externes</span>
           <span class="ac-item"><span class="ac-dot" style="background:#A13E8C"></span>Magenta — intendance, hôtellerie, cuisine</span>
         </div>
 
@@ -694,10 +696,40 @@ strong{color:var(--ink);}
         </div>
 
         <div class="quiz" id="q2a">
-          <div class="quiz-q"><span class="qmark">?</span>Tu t'es trompée de résident en notant une observation. Que fais-tu ?</div>
+          <div class="quiz-q"><span class="qmark">?</span>Tu t'es trompé·e de résident·e en notant une observation. Que fais-tu ?</div>
           <div class="opts">
             <button class="opt" data-correct="false">Je sélectionne le texte et j'appuie sur Suppr</button>
             <button class="opt" data-correct="true">Je grise l'observation et j'indique le motif</button>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <h2 style="margin-top:28px;">Archiver la feuille d'observations</h2>
+        <p>Archiver, ce n'est <strong>pas supprimer</strong> : les observations affichées quittent l'écran courant pour garder la feuille lisible, mais elles restent consultables à tout moment. Ce sont les équipes elles-mêmes qui archivent la feuille.</p>
+
+        <div class="path"><span class="path-label">Archiver</span><span class="path-step"><span class="path-num">1</span>Tableau de bord</span><span class="path-arrow">→</span><span class="path-step"><span class="path-num">2</span>Résident·e</span><span class="path-arrow">→</span><span class="path-step"><span class="path-num">3</span>Bouton « Observations »</span><span class="path-arrow">→</span><span class="path-step"><span class="path-num">4</span>Icône « Archiver » (jumelles + flèche)</span></div>
+
+        <div class="shot-wrap">
+          <img src="data:image/jpeg;base64,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8YHJpA8po6Oe6kPc06bXPTvFq8X58bbncZmyvgjeHiFrQQ1pcORdzdvty6EFwIiICIiAiIgIiICiumnzcrPvq7fiNQpUohT4ZVUbqltsy/IKGmnqp6vweKOicyN80rpXhpfTudtxPdtu4oJeiivivd+veSdhbvdU8V7v17yTsLd7qglSKK+K93695J2Fu91TxXu/XvJOwt3uqCVIor4r3fr3knYW73VPFe79e8k7C3e6oJUiivivd+veSdhbvdU8V7v17yTsLd7qglSKK+K93695J2Fu91TxXu/XvJOwt3uqCVIor4r3fr3knYW73VPFe79e8k7C3e6oJUiivivd+veSdhbvdU8V7v17yTsLd7qglSKK+K93695J2Fu91TxXu/XvJOwt3uqCVIor4r3fr3knYW73VPFe79e8k7C3e6oJUiivivd+veSdhbvdU8V7v17yTsLd7qglSKK+K93695J2Fu91TxXu/XvJOwt3uqCVIor4r3fr3knYW73VPFe79e8k7C3e6oJUiivivd+veSdhbvdU8V7v17yTsLd7qglSKK+K93695J2Fu91TxXu/XvJOwt3uqCVIor4r3fr3knYW73VPFe79e8k7C3e6oJUiivivd+veSdhbvdU8V7v17yTsLd7qglSKK+K93695J2Fu91TxXu/XvJOwt3uqCVIor4r3fr3knYW73VPFe79e8k7C3e6oJUiivivd+veSdhbvdU8V7v17yTsLd7qglSKK+K93695J2Fu91TxXu/XvJOwt3uqCVIor4r3fr3knYW73VPFe79e8k7C3e6oJUiivivd+veSdhbvdU8V7v17yTsLd7qglSKK+K93695J2Fu91TxXu/XvJOwt3uqCVIor4r3fr3knYW73VPFe79e8k7C3e6oJUiivivd+veSdhbvdU8V7v17yTsLd7qglSKK+K93695J2Fu91UqQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQf/2Q==" alt="Icônes Archiver et Consulter les archives" style="max-width:260px;">
+          <div class="shot-cap">En haut à gauche de la feuille d'observations : « Archiver » et « Consulter les archives »</div>
+        </div>
+
+        <ul class="bullets-tight">
+          <li><strong>Jumelles + flèche</strong> = archiver ce qui est affiché</li>
+          <li><strong>Jumelles seules</strong> = consulter les archives et relire les anciennes observations</li>
+          <li>Les mêmes icônes se retrouvent dans les <strong>mémos</strong> et les <strong>feuilles d'intervenant·es</strong></li>
+        </ul>
+
+        <div class="box tip">
+          <span class="box-label">À retenir</span>
+          <p>Archiver = ranger, jamais effacer. Les jumelles rouvrent les archives.</p>
+        </div>
+
+        <div class="quiz" id="q2b">
+          <div class="quiz-q"><span class="qmark">?</span>Une collègue hésite à archiver la feuille d'observations de peur de perdre les informations. Que lui réponds-tu ?</div>
+          <div class="opts">
+            <button class="opt" data-correct="false">Elle a raison : archiver efface les observations</button>
+            <button class="opt" data-correct="true">Rien n'est perdu : on relit les archives avec les jumelles</button>
           </div>
           <div class="feedback"></div>
         </div>
@@ -1187,7 +1219,7 @@ strong{color:var(--ink);}
 
         <div class="box tip">
           <span class="box-label">Qui prescrit, selon le lieu</span>
-          <p>En <strong>EPSM</strong>, c'est en général le <strong>médecin</strong> qui prescrit directement. En <strong>appartement protégé</strong>, ce sont souvent les <strong>infirmiers</strong> qui saisissent la prescription transmise par le médecin. Sois particulièrement attentif·ve en cas de <strong>retranscription</strong> — recopier une prescription orale ou téléphonique est un moment à risque d'erreur, toujours à faire vérifier.</p>
+          <p>En <strong>EPSM</strong>, c'est en général le <strong>médecin</strong> qui prescrit directement. En <strong>appartement protégé</strong>, ce sont souvent les <strong>infirmier·ères</strong> qui saisissent la prescription transmise par le médecin. Sois particulièrement attentif·ve en cas de <strong>retranscription</strong> — recopier une prescription orale ou téléphonique est un moment à risque d'erreur, toujours à faire vérifier.</p>
         </div>
 
         <div class="box warn">
@@ -1416,7 +1448,7 @@ strong{color:var(--ink);}
           <div class="big-score" id="finalScore">0 / 16</div>
           <p style="color:var(--ink-soft);max-width:46ch;margin:8px auto 0;">cibles clôturées.</p>
 
-          <p style="color:var(--ink);max-width:440px;margin:16px auto 0;font-size:12.5px;line-height:1.6;">Tu arrives au bout de ce parcours — bravo pour le travail fourni ! Ces gestes deviendront naturels en les pratiquant, pas en les mémorisant par cœur : n’hésite jamais à revenir ici ou à demander de l’aide à ton équipe si un écran te résiste, ça fait partie de l’apprentissage. Le DIR n’est qu’un outil — ce qui compte, c’est ce qu’il te permet de transmettre pour bien accompagner les résidents. Belle suite dans ta formation  !</p>
+          <p style="color:var(--ink);max-width:440px;margin:16px auto 0;font-size:12.5px;line-height:1.6;">Tu arrives au bout de ce parcours — bravo pour le travail fourni ! Ces gestes deviendront naturels en les pratiquant, pas en les mémorisant par cœur : n’hésite jamais à revenir ici ou à demander de l’aide à ton équipe si un écran te résiste, ça fait partie de l’apprentissage. Le DIR n’est qu’un outil — ce qui compte, c’est ce qu’il te permet de transmettre pour bien accompagner les résidents. Belle suite dans ta formation  !</p>
 
           <div class="box tip" style="text-align:left;margin-top:26px;max-width:420px;margin-left:auto;margin-right:auto;">
             <span class="box-label">Récapitulatif</span>
@@ -1465,16 +1497,16 @@ strong{color:var(--ink);}
   </div>
 </div>
 <script>
-const ALL_ROLES = ['ASA','ASSC','INF'];
+const ALL_ROLES = ['ASA','ASSC','INF','EDUC','IPS'];
 const SECTIONS = [
   {id:0,  label:'Bienvenue',              roles:ALL_ROLES},
   {id:1,  label:'Se repérer',             roles:ALL_ROLES},
   {id:2,  label:"Journal d'observ.",      roles:ALL_ROLES},
   {id:3,  label:'Soins AVQ',              roles:ALL_ROLES},
-  {id:4,  label:'Soins techniques',       roles:['ASSC','INF']},
+  {id:4,  label:'Soins techniques',       roles:['ASSC','INF','EDUC']},
   {id:5,  label:'Signes vitaux',          roles:ALL_ROLES},
   {id:6,  label:'Agenda & RDV',           roles:ALL_ROLES},
-  {id:7,  label:'Projets de soins',       roles:['ASSC','INF']},
+  {id:7,  label:'Projets de soins',       roles:['ASSC','INF','EDUC','IPS']},
   {id:8,  label:'Réserves',               roles:['ASSC','INF']},
   {id:9,  label:'Douleur',                roles:ALL_ROLES},
   {id:10, label:'Plaies & évaluations',   roles:['ASSC','INF']},
@@ -1484,7 +1516,7 @@ const SECTIONS = [
   {id:14, label:'Admin & recherche',      roles:ALL_ROLES},
   {id:15, label:'Mise en situation',      roles:ALL_ROLES}
 ];
-let userRole = null; // 'ASA' | 'ASSC' | 'INF' | null (null = tout afficher)
+let userRole = null; // 'ASA' | 'ASSC' | 'INF' | 'EDUC' | 'IPS' | null (null = tout afficher)
 let currentPanel = 0;
 
 function isApplicable(id){
@@ -1626,7 +1658,7 @@ function refreshDots(){
 }
 
 function roleLabel(){
-  const labels = {ASA:"Assistant\u00b7e en Soins et Accompagnement (ASA)", ASSC:"Assistant\u00b7e Socio-Sanitaire (ASSC)", INF:"Infirmier\u00b7\u00e8re (INF)"};
+  const labels = {ASA:"Assistant\u00b7e en Soins et Accompagnement (ASA)", ASSC:"Assistant\u00b7e Socio-Sanitaire (ASSC)", INF:"Infirmier\u00b7\u00e8re (INF)", EDUC:"\u00c9ducateur\u00b7trice", IPS:"Intervenant\u00b7e psychosocial\u00b7e"};
   return userRole ? labels[userRole] : 'Toutes les cibles';
 }
 
