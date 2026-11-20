@@ -531,11 +531,12 @@ strong{color:var(--ink);}
           <span class="box-label">Ton profil</span>
           <p style="margin-bottom:10px;">Choisis ton métier ou ta filière : seules les cibles qui te concernent s'afficheront dans le menu.</p>
           <div style="display:flex;gap:8px;flex-wrap:wrap;">
-            <button class="role-btn" data-role="ASA" type="button">ASA</button>
+            <button class="role-btn" data-role="ASA" type="button">ASA / auxiliaire</button>
             <button class="role-btn" data-role="ASSC" type="button">ASSC</button>
             <button class="role-btn" data-role="INF" type="button">Infirmier·ère</button>
             <button class="role-btn" data-role="EDUC" type="button">Éducateur·trice</button>
             <button class="role-btn" data-role="IPS" type="button">Intervenant·e psychosocial·e</button>
+            <button class="role-btn" data-role="ASE" type="button">ASE</button>
             <button class="role-btn" data-role="" type="button">Tout afficher</button>
           </div>
           <p id="roleConfirm" style="font-size:11px;color:var(--primary-dark);margin:8px 0 0 0;display:none;"></p>
@@ -732,6 +733,11 @@ strong{color:var(--ink);}
             <button class="opt" data-correct="true">Rien n'est perdu : on relit les archives avec les jumelles</button>
           </div>
           <div class="feedback"></div>
+        </div>
+
+        <div class="box tip">
+          <span class="box-label">Évaluations, mémos, documents : informer l'équipe</span>
+          <p>Quand tu mets à jour une évaluation, un mémo ou un document, appuie sur l'icône <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAeCAIAAABWjiKMAAAA70lEQVR4Xu2UzQ3DIAyFnSoDeMncGcGH3utT52CIDAQTUCWOyA+GQJRDpfYp4gDyh/1s0oUQvPdwSdbacRzfr6dEPy5BdP0Cq1dLR2TZJwJjTKWni1/MSzDABHLOyEe0Oypr9V5yEVCMEVyldn08gFLhrBz6OBPRKREiH/IiAM7gVu9jDDNHv7feI2II0HXTHWo7FlauWek+zVLL1GdCdSoE8N4RoXNOZbW9oe3opKrKS5wqJ9X2nygnBVCXF4C0j3JOiRr8KoN0lkz2dgU4B+ksuT9dT9VQ46n+rDZ9q1/T27bWthWTUT8Mwy2gm/UBzOFkwOcNxnQAAAAASUVORK5CYII=" alt="Icône flèche + crayon" style="width:20px;height:24px;vertical-align:middle;display:inline;margin:0 3px;border:1px solid var(--line);border-radius:3px;box-shadow:none;"> (flèche + crayon). La mise à jour apparaît alors dans le journal d'observations et tes collègues en sont informé·es.</p>
         </div>
 
         <div class="panel-nav">
@@ -1106,11 +1112,17 @@ strong{color:var(--ink);}
 
         <ul class="bullets-tight">
           <li><strong>Évaluation PILOT</strong> et <strong>Évaluation EC</strong> (état mental) se trouvent toutes les deux dans <strong>3-Comportement</strong> : clique sur le bouton gris au bout de la ligne pour l'ouvrir</li>
+          <li>L'évaluation <strong>s'ouvre dans Word</strong> : c'est une échelle à remplir, pas une transmission ciblée</li>
           <li>L'ancien mémo « Risque suicidaire » n'est <strong>plus utilisé</strong> (archivé) : on passe toujours par les évaluations</li>
         </ul>
 
+        <div class="box warn">
+          <span class="box-label">Prévenir l'équipe de la mise à jour</span>
+          <p>Une fois l'échelle remplie, appuie sur l'icône <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAeCAIAAABWjiKMAAAA70lEQVR4Xu2UzQ3DIAyFnSoDeMncGcGH3utT52CIDAQTUCWOyA+GQJRDpfYp4gDyh/1s0oUQvPdwSdbacRzfr6dEPy5BdP0Cq1dLR2TZJwJjTKWni1/MSzDABHLOyEe0Oypr9V5yEVCMEVyldn08gFLhrBz6OBPRKREiH/IiAM7gVu9jDDNHv7feI2II0HXTHWo7FlauWek+zVLL1GdCdSoE8N4RoXNOZbW9oe3opKrKS5wqJ9X2nygnBVCXF4C0j3JOiRr8KoN0lkz2dgU4B+ksuT9dT9VQ46n+rDZ9q1/T27bWthWTUT8Mwy2gm/UBzOFkwOcNxnQAAAAASUVORK5CYII=" alt="Icône flèche + crayon" style="width:20px;height:24px;vertical-align:middle;display:inline;margin:0 3px;border:1px solid var(--line);border-radius:3px;box-shadow:none;"> (flèche + crayon) : une ligne s'inscrit dans le <strong>journal d'observations</strong> et tes collègues savent qu'une évaluation a été mise à jour. Sans ce geste, personne ne le voit.</p>
+        </div>
+
         <ul class="bullets-tight">
-          <li>Note l'observation et pose une <strong>cible</strong> pour garder une trace datée et transmissible à toute l'équipe</li>
+          <li>Note ce que tu observes dans la <strong>feuille d'observations</strong> pour garder une trace datée et transmissible à toute l'équipe</li>
           <li>Alerte immédiatement l'infirmier·ère responsable ou le médecin de garde, selon la procédure de ton établissement</li>
           <li>Si un suivi structuré est nécessaire dans la durée, un <strong>projet</strong> (cible 7) peut coordonner l'équipe autour de la situation</li>
         </ul>
@@ -1278,12 +1290,11 @@ strong{color:var(--ink);}
           <li><strong>3 points d'entrée</strong> : depuis la carte de traitements, depuis une consultation médicale, ou directement depuis l'écran de commande (menu Pharmacie)</li>
           <li>Sélectionner le médicament, le résident et le médecin — quantité par défaut : <strong>1 emballage</strong></li>
           <li>On <strong>n'imprime pas</strong> le bon de commande : la commande part <strong>directement depuis le DIR</strong>, et tu reçois une <strong>copie par email</strong></li>
-          <li>Après envoi : noter chaque médicament comme commandé/livré, ligne par ligne ou pour toute la liste</li>
         </ul>
 
         <div class="box tip">
           <span class="box-label">Chez Altage</span>
-          <p>Une pharmacie par site (AMAVITA pour la majorité des sites). La commande est envoyée <strong>directement depuis le DIR</strong>, sans impression, et une <strong>copie arrive par email</strong> — le fax n'est plus utilisé. Ce circuit vaut aussi bien pour les commandes non urgentes que pour les commandes urgentes.</p>
+          <p>Une pharmacie par site (AMAVITA pour la majorité des sites). La commande est envoyée <strong>directement depuis le DIR</strong>, sans impression, et une <strong>copie arrive par email</strong>. Ce circuit vaut aussi bien pour les commandes non urgentes que pour les commandes urgentes.</p>
         </div>
 
         <div class="box warn">
@@ -1439,7 +1450,7 @@ strong{color:var(--ink);}
         <ul class="bullets-tight">
           <li><strong>Jumelles + flèche</strong> = archiver la page · <strong>Jumelles seules</strong> = consulter les archives</li>
           <li>Au centre : <strong>qui</strong> a modifié le mémo et <strong>quand</strong> (dernières modifications)</li>
-          <li><strong>Crayon + flèche</strong> = noter la mise à jour du mémo dans les observations : une ligne s'affiche dans la feuille d'observations pour prévenir l'équipe</li>
+          <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAeCAIAAABWjiKMAAAA70lEQVR4Xu2UzQ3DIAyFnSoDeMncGcGH3utT52CIDAQTUCWOyA+GQJRDpfYp4gDyh/1s0oUQvPdwSdbacRzfr6dEPy5BdP0Cq1dLR2TZJwJjTKWni1/MSzDABHLOyEe0Oypr9V5yEVCMEVyldn08gFLhrBz6OBPRKREiH/IiAM7gVu9jDDNHv7feI2II0HXTHWo7FlauWek+zVLL1GdCdSoE8N4RoXNOZbW9oe3opKrKS5wqJ9X2nygnBVCXF4C0j3JOiRr8KoN0lkz2dgU4B+ksuT9dT9VQ46n+rDZ9q1/T27bWthWTUT8Mwy2gm/UBzOFkwOcNxnQAAAAASUVORK5CYII=" alt="Icône flèche + crayon" style="width:20px;height:24px;vertical-align:middle;display:inline;margin:0 3px;border:1px solid var(--line);border-radius:3px;box-shadow:none;"> <strong>Flèche + crayon</strong> = noter la mise à jour du mémo dans les observations : une ligne s'affiche dans le journal d'observations pour prévenir l'équipe. <strong>N'oublie pas d'appuyer dessus</strong> après chaque mise à jour.</li>
           <li><strong>Disquette</strong> = sauvegarder en cours de travail · <strong>SORTIE</strong> = sortir pour valider</li>
         </ul>
 
@@ -1486,56 +1497,131 @@ strong{color:var(--ink);}
 
 <section class="panel" id="panel-16" data-title="Mise en situation">
         <div class="eyebrow"><span class="dash"></span>Cible 16 · Synthèse</div>
-        <h1>Mise en situation : Mme Dubois</h1>
+        <h1>Mise en situation</h1>
+        <p style="font-size:14px;color:var(--ink-soft);">La situation proposée dépend du métier choisi à l'accueil.</p>
 
+        <div class="scen" data-roles="INF,EDUC,IPS,ASSC,ASE">
+        <h2>Situation — infirmier·ère, éducateur·trice, intervenant·e psychosocial·e, ASSC, ASE</h2>
         <div class="scenario-card">
           <div class="eyebrow"><span class="dash"></span>Situation</div>
-          <p><strong>Mme Dubois, 87 ans</strong>, se plaint ce matin d'une douleur au talon droit. Tu observes une rougeur à la pression, sans plaie ouverte.</p>
+          <p><strong>M. Martin, 45 ans</strong>, vit à l'EPSM. Depuis deux jours, l'équipe le trouve plus replié : il reste dans sa chambre, dort mal, ne vient plus aux repas et dit à plusieurs reprises « je ne sers plus à rien ».</p>
         </div>
 
         <div class="quiz" id="s1">
-          <div class="quiz-q"><span class="qmark">1</span>Pour ouvrir le dossier Escarres et Plaies de Mme Dubois, quel est le bon chemin ?</div>
+          <div class="quiz-q"><span class="qmark">1</span>Tu remarques ces changements pendant ton service. Où le notes-tu pour que toute l'équipe en soit informée ?</div>
           <div class="opts">
-            <button class="opt" data-correct="false">Tableau de bord → Signes vitaux</button>
-            <button class="opt" data-correct="true">Tableau de bord → Observations → menu des dossiers</button>
+            <button class="opt" data-correct="false">Dans un mémo, sans rien d'autre</button>
+            <button class="opt" data-correct="true">Dans la feuille d'observations (bouton « Observations »)</button>
           </div>
           <div class="feedback"></div>
         </div>
 
         <div class="quiz" id="s2">
-          <div class="quiz-q"><span class="qmark">2</span>Cinq jours plus tard, la rougeur persiste malgré les soins mis en place. Que peut envisager l'équipe ?</div>
+          <div class="quiz-q"><span class="qmark">2</span>L'équipe décide de faire l'évaluation PILOT et une évaluation clinique de l'état mental. Où les trouves-tu ?</div>
           <div class="opts">
-            <button class="opt" data-correct="false">Ne rien faire, ça finira par passer</button>
-            <button class="opt" data-correct="true">Ouvrir un projet (bouton « Projets ») pour un suivi structuré</button>
+            <button class="opt" data-correct="false">Dans le mémo « Risque suicidaire »</button>
+            <button class="opt" data-correct="true">Observations → Évaluations → 3-Comportement</button>
           </div>
           <div class="feedback"></div>
         </div>
 
         <div class="quiz" id="s3">
-          <div class="quiz-q"><span class="qmark">3</span>Le médecin prescrit une crème lors de sa visite. Où cela s'enregistre-t-il ?</div>
+          <div class="quiz-q"><span class="qmark">3</span>L'échelle PILOT est remplie dans Word. Que fais-tu pour que tes collègues sachent qu'elle a été mise à jour ?</div>
           <div class="opts">
-            <button class="opt" data-correct="true">Comme une prescription rattachée à cette consultation (bouton « Traitements »)</button>
-            <button class="opt" data-correct="false">Directement dans le journal, sans consultation</button>
+            <button class="opt" data-correct="true">J'appuie sur l'icône flèche + crayon pour que la mise à jour apparaisse dans le journal d'observations</button>
+            <button class="opt" data-correct="false">Rien : le document est enregistré, ça suffit</button>
           </div>
           <div class="feedback"></div>
         </div>
 
         <div class="quiz" id="s4">
-          <div class="quiz-q"><span class="qmark">4</span>Tu veux suivre visuellement l'évolution de la rougeur. Quel outil utilises-tu ?</div>
+          <div class="quiz-q"><span class="qmark">4</span>Le lendemain, un entretien socio-thérapeutique a lieu avec M. Martin. Une fois le compte rendu écrit dans le mémo, que fais-tu ?</div>
           <div class="opts">
-            <button class="opt" data-correct="true">Le dossier Escarres et Plaies, avec photo associée</button>
-            <button class="opt" data-correct="false">Le module Signes Vitaux</button>
+            <button class="opt" data-correct="false">J'écris par-dessus le compte rendu précédent</button>
+            <button class="opt" data-correct="true">Je note la mise à jour dans les observations, puis j'archive la page</button>
           </div>
           <div class="feedback"></div>
         </div>
 
         <div class="quiz" id="s5">
-          <div class="quiz-q"><span class="qmark">5</span>Tu apprends que la fiche de Mme Dubois n'a plus de personne de contact à jour. Où mets-tu à jour cette information ?</div>
+          <div class="quiz-q"><span class="qmark">5</span>Le médecin prescrit un nouveau traitement qui n'est pas dans la liste des traitements. Comment le commandes-tu ?</div>
           <div class="opts">
-            <button class="opt" data-correct="true">Données administratives → Adresses</button>
-            <button class="opt" data-correct="false">Dans le journal d'observations uniquement</button>
+            <button class="opt" data-correct="false">J'imprime un bon de commande pour la pharmacie</button>
+            <button class="opt" data-correct="true">J'appuie sur le + en haut de la liste des traitements</button>
           </div>
           <div class="feedback"></div>
+        </div>
+
+        <div class="quiz" id="s6">
+          <div class="quiz-q"><span class="qmark">6</span>L'équipe veut accompagner M. Martin dans la durée, à partir de ses objectifs. Que met-elle en place dans le DIR ?</div>
+          <div class="opts">
+            <button class="opt" data-correct="true">Un projet (PIA / PSI) avec ses actions, relié à l'agenda</button>
+            <button class="opt" data-correct="false">Des observations au fil de l'eau, sans projet</button>
+          </div>
+          <div class="feedback"></div>
+        </div>
+        </div>
+
+        <div class="scen" data-roles="ASA">
+        <h2>Situation — ASA / auxiliaire</h2>
+        <div class="scenario-card">
+          <div class="eyebrow"><span class="dash"></span>Situation</div>
+          <p><strong>Mme Rochat, 58 ans</strong>, vit à l'EPSM. Ce matin, elle refuse sa douche, paraît tendue, se tient le ventre et dit avoir mal. L'après-midi est prévu un atelier peinture auquel elle est inscrite.</p>
+        </div>
+
+        <div class="quiz" id="a1">
+          <div class="quiz-q"><span class="qmark">1</span>Mme Rochat refuse sa douche. Que fais-tu de cet acte dans le DIR ?</div>
+          <div class="opts">
+            <button class="opt" data-correct="false">Je le valide quand même pour qu'il disparaisse de l'agenda</button>
+            <button class="opt" data-correct="true">Je ne le valide pas : il reste affiché et réapparaît jusqu'à ce qu'il soit fait</button>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <div class="quiz" id="a2">
+          <div class="quiz-q"><span class="qmark">2</span>Ce que tu observes (tension, refus, plainte de douleur) doit être connu de l'équipe. Où et comment le notes-tu ?</div>
+          <div class="opts">
+            <button class="opt" data-correct="true">Dans la feuille d'observations, en noir (couleur des aides)</button>
+            <button class="opt" data-correct="false">Je le dis oralement à la relève, sans rien noter</button>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <div class="quiz" id="a3">
+          <div class="quiz-q"><span class="qmark">3</span>Tu évalues sa douleur avec l'EVA : elle l'estime à 6. Que se passe-t-il ?</div>
+          <div class="opts">
+            <button class="opt" data-correct="true">Une alerte se déclenche (seuil de 5) et je préviens l'infirmier·ère</button>
+            <button class="opt" data-correct="false">Rien de particulier, c'est une valeur normale</button>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <div class="quiz" id="a4">
+          <div class="quiz-q"><span class="qmark">4</span>L'infirmier·ère te demande de prendre sa tension. Que renseignes-tu dans les signes vitaux ?</div>
+          <div class="opts">
+            <button class="opt" data-correct="false">Juste la valeur mesurée</button>
+            <button class="opt" data-correct="true">La valeur, avec la date, la période de la journée et l'heure exacte</button>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <div class="quiz" id="a5">
+          <div class="quiz-q"><span class="qmark">5</span>Mme Rochat participe finalement à l'atelier peinture (activité de groupe). Où note-t-on sa présence ?</div>
+          <div class="opts">
+            <button class="opt" data-correct="true">Dans le suivi de l'activité, depuis l'Agenda Général</button>
+            <button class="opt" data-correct="false">Directement dans son agenda individuel</button>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <div class="quiz" id="a6">
+          <div class="quiz-q"><span class="qmark">6</span>Pour mieux comprendre ce qui l'apaise, tu veux lire un mémo auquel tu n'as pas accès. Que fais-tu ?</div>
+          <div class="opts">
+            <button class="opt" data-correct="false">Je laisse tomber</button>
+            <button class="opt" data-correct="true">Je demande à un·e collègue qui y a accès de le consulter avec moi</button>
+          </div>
+          <div class="feedback"></div>
+        </div>
         </div>
 
         <div class="completion" id="completionBlock" style="display:none;">
@@ -1592,16 +1678,16 @@ strong{color:var(--ink);}
   </div>
 </div>
 <script>
-const ALL_ROLES = ['ASA','ASSC','INF','EDUC','IPS'];
+const ALL_ROLES = ['ASA','ASSC','INF','EDUC','IPS','ASE'];
 const SECTIONS = [
   {id:0,  label:'Bienvenue',              roles:ALL_ROLES},
   {id:1,  label:'Se repérer',             roles:ALL_ROLES},
   {id:2,  label:"Journal d'observ.",      roles:ALL_ROLES},
   {id:3,  label:'Soins AVQ',              roles:ALL_ROLES},
-  {id:4,  label:'Soins techniques',       roles:['ASSC','INF','EDUC']},
+  {id:4,  label:'Soins techniques',       roles:['ASSC','INF','EDUC','ASE']},
   {id:5,  label:'Signes vitaux',          roles:ALL_ROLES},
   {id:6,  label:'Agenda & RDV',           roles:ALL_ROLES},
-  {id:7,  label:'Projets de soins',       roles:['ASSC','INF','EDUC','IPS']},
+  {id:7,  label:'Projets de soins',       roles:['ASSC','INF','EDUC','IPS','ASE']},
   {id:8,  label:'Réserves',               roles:['ASSC','INF']},
   {id:9,  label:'Douleur',                roles:ALL_ROLES},
   {id:10, label:'Plaies & évaluations',   roles:['ASSC','INF']},
@@ -1623,7 +1709,24 @@ function isApplicable(id){
 function getApplicableSections(){
   return SECTIONS.filter(s=>isApplicable(s.id));
 }
-function applyRoleFilter(){ updateTabVisibility(); }
+function updateScenarios(){
+  const lastId = SECTIONS.length - 1;
+  const panel = document.getElementById('panel-' + lastId);
+  if(!panel) return;
+  const visibleIds = new Set();
+  panel.querySelectorAll('.scen').forEach(el=>{
+    const roles = (el.dataset.roles || '').split(',');
+    const vis = !userRole || roles.indexOf(userRole) !== -1;
+    el.style.display = vis ? '' : 'none';
+    if(vis) el.querySelectorAll('.quiz').forEach(q=>visibleIds.add(q.id));
+  });
+  const p = progress[lastId];
+  if(p){
+    p.required = visibleIds.size;
+    p.done = new Set([...p.done].filter(id=>visibleIds.has(id)));
+  }
+}
+function applyRoleFilter(){ updateScenarios(); updateTabVisibility(); }
 
 let searchQuery = '';
 let sectionTextIndex = {};
@@ -1754,7 +1857,7 @@ function refreshDots(){
 }
 
 function roleLabel(){
-  const labels = {ASA:"Assistant\u00b7e en Soins et Accompagnement (ASA)", ASSC:"Assistant\u00b7e Socio-Sanitaire (ASSC)", INF:"Infirmier\u00b7\u00e8re (INF)", EDUC:"\u00c9ducateur\u00b7trice", IPS:"Intervenant\u00b7e psychosocial\u00b7e"};
+  const labels = {ASA:"ASA / auxiliaire", ASSC:"Assistant\u00b7e Socio-Sanitaire (ASSC)", INF:"Infirmier\u00b7\u00e8re (INF)", EDUC:"\u00c9ducateur\u00b7trice", IPS:"Intervenant\u00b7e psychosocial\u00b7e", ASE:"Assistant\u00b7e socio-\u00e9ducatif\u00b7ve (ASE)"};
   return userRole ? labels[userRole] : 'Toutes les cibles';
 }
 
@@ -1966,6 +2069,7 @@ function initRoleButtons(){
 document.addEventListener('DOMContentLoaded', ()=>{
   buildTabs();
   initProgressTracking();
+  updateScenarios();
   document.querySelectorAll('.quiz').forEach(q=>{
     if(q.classList.contains('order-wrap')) initOrdering(q);
     else if(q.classList.contains('class-wrap')) initClassification(q);
