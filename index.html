@@ -435,7 +435,7 @@ strong{color:var(--ink);}
 </div>
 <script>
 (function(){
-  var ACCESS_CODE = "AltageFP2026"; // <- change ce code ici pour le modifier
+  var ACCESS_CODE = "TEST2711"; // <- change ce code ici pour le modifier
   var STORAGE_KEY = "sadiesDirAccessGranted_v1";
   var gate = document.getElementById('dirAccessGate');
   var form = document.getElementById('dirGateForm');
@@ -1105,6 +1105,38 @@ strong{color:var(--ink);}
           <li>Si un suivi structuré est nécessaire dans la durée, un <strong>projet</strong> (cible 7) peut coordonner l'équipe autour de la situation</li>
         </ul>
 
+        <h2 style="margin-top:28px;">Remplir un rapport d'incident</h2>
+        <p style="font-size:14px;color:var(--ink-soft);">Agressivité, fugue, conflit, erreur, dégât matériel… Tout incident fait l'objet d'un rapport, rempli par la personne qui en a été témoin.</p>
+
+        <div class="path"><span class="path-label">Remplir le rapport</span><span class="path-step"><span class="path-num">1</span>Résident·e</span><span class="path-arrow">→</span><span class="path-step"><span class="path-num">2</span>Bouton « Observations »</span><span class="path-arrow">→</span><span class="path-step"><span class="path-num">3</span>« Évaluations »</span><span class="path-arrow">→</span><span class="path-step"><span class="path-num">4</span>« 3-Comportement »</span><span class="path-arrow">→</span><span class="path-step"><span class="path-num">5</span>« Rapport d'incident »</span></div>
+
+        <ul class="bullets-tight">
+          <li>Clique sur <strong>« Mode modif »</strong> pour écrire, puis sur la <strong>disquette</strong> pour sauvegarder</li>
+          <li>On passe <strong>par les Évaluations</strong>, pas par la ligne « Rapport d'incident » des mémos</li>
+          <li>Appuie sur l'icône <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAeCAIAAABWjiKMAAAA70lEQVR4Xu2UzQ3DIAyFnSoDeMncGcGH3utT52CIDAQTUCWOyA+GQJRDpfYp4gDyh/1s0oUQvPdwSdbacRzfr6dEPy5BdP0Cq1dLR2TZJwJjTKWni1/MSzDABHLOyEe0Oypr9V5yEVCMEVyldn08gFLhrBz6OBPRKREiH/IiAM7gVu9jDDNHv7feI2II0HXTHWo7FlauWek+zVLL1GdCdSoE8N4RoXNOZbW9oe3opKrKS5wqJ9X2nygnBVCXF4C0j3JOiRr8KoN0lkz2dgU4B+ksuT9dT9VQ46n+rDZ9q1/T27bWthWTUT8Mwy2gm/UBzOFkwOcNxnQAAAAASUVORK5CYII=" alt="Icône flèche + crayon" style="width:20px;height:24px;vertical-align:middle;display:inline;margin:0 3px;border:1px solid var(--line);border-radius:3px;box-shadow:none;"> pour que la mise à jour apparaisse dans le journal d'observations</li>
+        </ul>
+
+        <div class="shot-wrap">
+          <img src="data:image/png;base64,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" alt="Barre de boutons du rapport d'incident">
+          <div class="shot-cap">En haut du rapport d'incident : archiver, consulter les archives, Mode modif, flèche + crayon (journal d'observations), loupe (impression en couleur via WordPad), mémo, disquette, SORTIE</div>
+        </div>
+
+        <div class="path"><span class="path-label">Envoyer le rapport par email</span><span class="path-step"><span class="path-num">1</span>Icône loupe « Impression en couleur via WordPad »</span><span class="path-arrow">→</span><span class="path-step"><span class="path-num">2</span>Le rapport s'ouvre dans WordPad</span><span class="path-arrow">→</span><span class="path-step"><span class="path-num">3</span>« Fichier » → « Envoyer par e-mail »</span><span class="path-arrow">→</span><span class="path-step"><span class="path-num">4</span>Le rapport est joint au message</span><span class="path-arrow">→</span><span class="path-step"><span class="path-num">5</span>Destinataires : directrice + responsable de site</span></div>
+
+        <div class="box warn">
+          <span class="box-label">Ne pas oublier</span>
+          <p>Le rapport d'incident est toujours <strong>envoyé par email à la directrice et au·à la responsable de site</strong>. L'enregistrer dans le DIR ne suffit pas.</p>
+        </div>
+
+        <div class="quiz" id="q9c">
+          <div class="quiz-q"><span class="qmark">?</span>Tu as rempli et sauvegardé un rapport d'incident depuis les Évaluations. Que fais-tu ensuite ?</div>
+          <div class="opts">
+            <button class="opt" data-correct="false">Rien : il est enregistré dans le DIR</button>
+            <button class="opt" data-correct="true">Je l'envoie par email à la directrice et au·à la responsable de site</button>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
         <div class="panel-nav">
           <button class="nav-btn ghost" data-goto="8"><span>←</span> Précédent</button>
           <button class="nav-btn" data-goto="10">Suivant <span>→</span></button>
@@ -1641,6 +1673,16 @@ strong{color:var(--ink);}
           </ul>
         </div>
 
+        <div class="box tip">
+          <span class="box-label">À venir</span>
+          <ul class="bullets-tight">
+            <li><strong>Raccourcis</strong> — les gestes qui font gagner du temps au quotidien</li>
+            <li><strong>Évaluation DMST interRAI</strong></li>
+            <li><strong>Examen clinique sommaire</strong></li>
+            <li>… et d'autres contenus en préparation</li>
+          </ul>
+        </div>
+
         <div class="box warn">
           <span class="box-label">Une situation non couverte ici&nbsp;?</span>
           <p>Le plus fiable reste de demander à ton·ta responsable ou à l’équipe sur place — le DIR est un outil vivant, paramétré différemment selon les sites. Et si tu penses qu’un sujet mériterait sa place dans ce parcours, fais-le remonter : ce module est amené à évoluer.</p>
@@ -1667,7 +1709,7 @@ const SECTIONS = [
   {id:6,  label:'Agenda & RDV',           roles:ALL_ROLES},
   {id:7,  label:'Projets de soins',       roles:['ASSC','INF','EDUC','IPS','ASE']},
   {id:8,  label:'Réserves',               roles:['ASSC','INF']},
-  {id:9,  label:'Douleur',                roles:ALL_ROLES},
+  {id:9,  label:'Douleur, PILOT, incident', roles:ALL_ROLES},
   {id:10, label:'Plaies & évaluations',   roles:['ASSC','INF']},
   {id:11, label:'Consultations',          roles:['INF']},
   {id:12, label:'Pharmacie',              roles:['INF']},
